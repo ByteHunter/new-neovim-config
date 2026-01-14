@@ -19,7 +19,12 @@ require("lazy").setup({
   spec = {
     -- Adding my plugins here
     { "folke/which-key.nvim", lazy = false },
-    { "nvim-tree/nvim-tree.lua", lazy = true },
+    { "nvim-tree/nvim-tree.lua", lazy = false },
+    { "nvim-treesitter/nvim-treesitter", lazy = false },
+    {
+      "mason-org/mason.nvim",
+      opts = {},
+    },
   },
   -- Colorscheme when installing plugins
   install = { colorscheme = { "habamax" } },
@@ -27,4 +32,5 @@ require("lazy").setup({
   checker = { enabled = false },
 })
 
-require("nvim-tree").setup({})
+require("nvim-tree").setup()
+require("mason").setup()
