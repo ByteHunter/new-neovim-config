@@ -18,6 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- Adding my plugins here
+    { "folke/which-key.nvim", lazy = false },
   },
   -- Colorscheme when installing plugins
   install = { colorscheme = { "habamax" } },
