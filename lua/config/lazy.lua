@@ -25,6 +25,7 @@ require("lazy").setup({
       "mason-org/mason.nvim",
       opts = {},
     },
+    { "mason-org/mason-lspconfig.nvim" },
   },
   -- Colorscheme when installing plugins
   install = { colorscheme = { "habamax" } },
@@ -34,3 +35,4 @@ require("lazy").setup({
 
 require("nvim-tree").setup()
 require("mason").setup()
+require("mason-lspconfig").setup()
