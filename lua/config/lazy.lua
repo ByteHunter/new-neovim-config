@@ -19,9 +19,12 @@ require("lazy").setup({
   spec = {
     -- Adding my plugins here
     { "folke/which-key.nvim", lazy = false },
+    { "nvim-tree/nvim-tree.lua", lazy = true },
   },
   -- Colorscheme when installing plugins
   install = { colorscheme = { "habamax" } },
   -- Disabling auto updater
   checker = { enabled = false },
 })
+
+require("nvim-tree").setup({})

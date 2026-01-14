@@ -5,5 +5,10 @@ local keymap = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 
 -- Keymaps
-keymap("n", "<leader>e", ":Lexplore 20<CR>", {})
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", {desc="Tree"})
 keymap("n", "<leader>L", ":Lazy<CR>", {})
+keymap("n", "<leader>q", ":q<CR>", {desc="Close window"})
+
+-- Better buffer navigation
+keymap("n", "<leader>bb", ":bp<CR>", {desc="Previous"})
+keymap("n", "<leader>bn", ":bp<CR>", {desc="Next"})
