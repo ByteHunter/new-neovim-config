@@ -1,3 +1,3 @@
 -- Initialize
-require "bytehunter.options"
-require "bytehunter.colorscheme"
+require "config.options"
+require "config.colorscheme"
