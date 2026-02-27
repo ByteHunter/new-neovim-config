@@ -34,5 +34,3 @@ require("lazy").setup({
 })
 
 require("nvim-tree").setup()
-require("mason").setup()
-require("mason-lspconfig").setup()
