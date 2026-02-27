@@ -1,8 +1,50 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "gopls", "lua_ls", "lua_ls" },
+  ensure_installed = { "gopls", "lua_ls" },
 })
-vim.lsp.config('gopls', {})
-vim.lsp.config('lua_ls', {})
+vim.lsp.config('gopls', {
+  cmd = { 'gopls' },
+  filetypes = { 'go' },
+  root_markers = { '.git' },
+  settings = {
+    gopls = {
+      hints = {
+        rangeVariableTypes = true,
+        parameterNames = true,
+        constantValues = true,
+        assignVariableTypes = true,
+        compositeLiteralFields = true,
+        compositeLiteralTypes = true,
+        functionTypeParameters = true,
+      },
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      },
+    }
+  }
+})
+vim.lsp.config('lua_ls', {
+  cmd = { 'lua-language-server' },
+  filetypes = { 'lua' },
+  root_markers = { '.git' },
+  settings = {
+    Lua = {
+      hint = { enable = true },
+      runtime = { version = 'LuaJIT' },
+      completion = { enable = true },
+      diagnostics = {
+        enable = true,
+        globals = { 'vim' }
+      },
+      workspace = {
+        library = { vim.env.VIMRUNTIME },
+        checkThirdParty = false,
+      },
+    },
+  },
+})
 
+vim.lsp.enable('gopls')
 vim.lsp.enable('lua_ls')
