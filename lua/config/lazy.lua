@@ -21,6 +21,8 @@ require("lazy").setup({
     { "folke/which-key.nvim", lazy = false },
     { "nvim-tree/nvim-tree.lua", lazy = false },
     { "nvim-treesitter/nvim-treesitter", lazy = false },
+    { "nvim-lua/plenary.nvim" },
+    { "nvim-telescope/telescope.nvim" },
     {
       "mason-org/mason.nvim",
       opts = {},
@@ -41,6 +43,10 @@ require("lazy").setup({
       },
       opts_extend = { "sources.default" },
     },
+    {
+      "akinsho/bufferline.nvim",
+      dependencies = "nvim-tree/nvim-web-devicons",
+    },
   },
   -- Colorscheme when installing plugins
   install = { colorscheme = { "habamax" } },
@@ -49,3 +55,4 @@ require("lazy").setup({
 })
 
 require("nvim-tree").setup()
+require("bufferline").setup()

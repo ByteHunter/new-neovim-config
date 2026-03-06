@@ -22,8 +22,8 @@ local options = {
   -- Show vertical column(s)
   colorcolumn = "120",
   -- Show characters at the end of the line
-  list = true,
-  listchars = "trail:-,eol:↩",
+  -- list = true,
+  -- listchars = "tab:  ,trail:-,eol:↩",
 }
 
 for k, v in pairs(options) do
