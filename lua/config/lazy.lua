@@ -44,6 +44,11 @@ require("lazy").setup({
       opts_extend = { "sources.default" },
     },
     {
+      "windwp/nvim-autopairs",
+      event = "InsertEnter",
+      config = true,
+    },
+    {
       "akinsho/bufferline.nvim",
       dependencies = "nvim-tree/nvim-web-devicons",
     },
