@@ -42,3 +42,4 @@ keymap('n', '<leader>tG', ':Telescope live_grep grep_open_files=true<CR>', {nore
 keymap('n', '<leader>tS', ':Telescope grep_string<CR>', {noremap=true, silent=true, desc='Grep string'})
 keymap('n', '<leader>ts', ':Telescope lsp_document_symbols<CR>', {noremap=true, silent=true, desc='Document Symbols'})
 keymap('n', '<leader>tT', ':Telescope<CR>', {noremap=true, silent=true, desc='Telescope'})
+keymap('n', '<leader>g', ':Telescope git_status<CR><Esc>', {noremap=true, silent=true, desc='Git status'})
