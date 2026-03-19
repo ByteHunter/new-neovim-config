@@ -47,5 +47,12 @@ vim.lsp.config('lua_ls', {
   },
 })
 
+vim.lsp.config('intelephense', {
+  cmd = { 'intelephense', '--stdio' },
+  filetypes = { 'php' },
+  root_markers = { '.git', 'composer.json' },
+})
+
 vim.lsp.enable('gopls')
 vim.lsp.enable('lua_ls')
+vim.lsp.enable('intelephense')
