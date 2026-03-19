@@ -53,6 +53,13 @@ vim.lsp.config('intelephense', {
   root_markers = { '.git', 'composer.json' },
 })
 
+vim.lsp.config('twiggy_language_server', {
+  cmd = { 'twiggy-language-server', '--stdio' },
+  filetypes = { 'twig' },
+  root_markers = { '.git', 'composer.json' },
+})
+
 vim.lsp.enable('gopls')
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('intelephense')
+vim.lsp.enable('twiggy_language_server')
